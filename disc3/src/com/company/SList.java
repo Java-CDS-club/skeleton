@@ -55,7 +55,7 @@ public class SList {
     // Because array has a fixed size, so to add an element, you need to create a new array
     //2.2 reverse, write a method that destructively reverses the items in x
     public static void reverse(int[] x){
-        for (int i=0; i<=x.length/2; i++){
+        for (int i=0; i<x.length/2; i++){
             int temp=x[i];
             x[i]=x[x.length-i-1];
             x[x.length-i-1]=temp;
@@ -78,15 +78,33 @@ public class SList {
         }
         return newX;
     }
-/*
+
+    public static int[] xify2(int[] x){
+        int sum=0;
+        for(int i=0; i<x.length; i++){
+            sum+=x[i];
+        }
+        int[] newX = new int[sum];
+        int pos=0;
+        for (int item:x){
+            for (int j=0; j<item; j++){
+                newX[pos]=item;
+                pos++;
+            }
+        }
+        return newX;
+    }
+
    public static void main(String[] args){
         int[] x ={1,2,3,4,5};
        int[] y=insert(x,6,2);
        reverse(y);
-       int[] newX=xify(y);
+       int[] newX=xify(x);
+       int[] newX2=xify2(x);
    }
-*/
 
+
+/*
     public static void main(String[] args) {
         SList front = new SList();
         for(int i = 0; i < 5; ++i) {
@@ -95,6 +113,7 @@ public class SList {
         front.insert(6,2);
         front.reverse();
     }
-
+*/
 }
+
 
