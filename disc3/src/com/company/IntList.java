@@ -90,13 +90,6 @@ public class IntList {
         L.head=L.head-x;
         IntList track=L;
         while(track.tail!=null){
-            track=track.tail;
-            track.head=track.head-x;
-        }
-        return L;
-    }
-
-    public static void main(String[] args) {
 
         //Test your answers by uncommenting. Or use the Visualizer.
         IntList L = new IntList(5, null);
@@ -105,6 +98,13 @@ public class IntList {
         System.out.println(L.size());
         System.out.println(L.iterativeSize());
         System.out.println(L.get(1));
+        track=track.tail;
+        track.head=track.head-x;
+    }
+        return L;
+}
+
+    public static void main(String[] args) {
         System.out.println(L.toString());
         IntList newList=incrList(L, 3);
         IntList dincrList=dincrList(L,1);
