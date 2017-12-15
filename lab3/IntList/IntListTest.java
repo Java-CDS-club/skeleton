@@ -66,6 +66,10 @@ public class IntListTest {
         assertEquals(IntList.list(1, 2, 3), A);
     }
 
+    public static void main(String... args){
+        jh61b.junit.TestRunner.runTests("all", IntListTest.class);
+    }
+
     /** If you're running this from the command line, you'll need
       * to add a main method. See ArithmeticTest.java for an
       * example. */
